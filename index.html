@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jonathan's Budgeting App</title>
+<meta name="description" content="A private, single-household budgeting application. What data it reads, how it is used, and how it is protected.">
+<style>
+  :root {
+    --bg: #f6f7fb; --card: #ffffff; --ink: #162033; --muted: #4f5b70;
+    --line: #dfe4ee; --accent: #2f4bd8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f1522; --card: #171f31; --ink: #e8ecf5; --muted: #a9b4c9; --line: #2b3855; --accent: #9db0ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 64px; }
+  header { margin-bottom: 28px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+            padding: 20px 22px; margin-bottom: 16px; }
+  h2 { font-size: 19px; line-height: 1.3; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  p:last-child, ul:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 10px; padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  a { color: var(--accent); }
+  footer { color: var(--muted); font-size: 14px; margin-top: 24px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Jonathan's Budgeting App</h1>
+    <p class="lede">A private budgeting tool for one household. It is not a public service, and it has no customers or other users.</p>
+  </header>
+
+  <section>
+    <h2>What it is</h2>
+    <p>This is a personal application I built to track spending, set monthly budgets and follow net worth across the financial accounts that belong to me and, with her consent, my spouse. It is used only by the people who own those accounts.</p>
+  </section>
+
+  <section>
+    <h2>What data it reads</h2>
+    <p>The app connects to financial institutions through <a href="https://plaid.com/legal/">Plaid</a>, with read-only access. It retrieves:</p>
+    <ul>
+      <li>Account names, the last four digits of account numbers, and balances</li>
+      <li>Transaction history (dates, merchants, amounts)</li>
+      <li>Investment holdings and investment activity</li>
+      <li>Loan balances, such as a mortgage</li>
+    </ul>
+    <p>The app never sees or stores bank usernames or passwords. Those are entered only on the bank's or Plaid's own sign-in screens. The app cannot move money.</p>
+  </section>
+
+  <section>
+    <h2>How the data is used</h2>
+    <p>Only to sort transactions into budget categories, show spending against a monthly budget, and chart account balances and investments over time. It is never sold, shared with third parties, or used for advertising, marketing or credit decisions.</p>
+  </section>
+
+  <section>
+    <h2>Where it is kept and how it is protected</h2>
+    <ul>
+      <li>Data is stored on a private server in my home, not on a public cloud service.</li>
+      <li>The storage is encrypted, and the app is reachable only over a private network.</li>
+      <li>Signing in to the app requires multi-factor authentication.</li>
+      <li>Connection to financial institutions and to Plaid uses encrypted (TLS) connections.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Consent, retention and deletion</h2>
+    <p>I link my own accounts myself. My spouse links her accounts herself, and may ask for her data to be deleted at any time.</p>
+    <p>Data is kept only while an account is connected. When an account is disconnected, access is revoked with Plaid and its data is deleted within 30 days. Logs and backups are kept for no more than 90 days. The full policy is reviewed every year.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about privacy or data handling: <a href="mailto:jkirkpatrickdesign@gmail.com">jkirkpatrickdesign@gmail.com</a></p>
+    <p>Plaid's own handling of data is described in its <a href="https://plaid.com/legal/">privacy policy</a>.</p>
+  </section>
+
+  <footer>Last updated October 17, 2026.</footer>
+</main>
+</body>
+</html>
